@@ -5,6 +5,6 @@ function test (prop, value) {
 	console.log(this.prop, this.value);
 }
 
-test.prototype.console = function(arr) {
-	console.log(arr[0]);
+test.prototype.console = function(arr) {	
+	console.log(arguments);
 }
