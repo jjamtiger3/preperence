@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta name="generator" content="iXebStudio Platform 2.2018.1213.2934">
+    <meta name="ixeb-studio:SaveZOrder" content="undefined">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="ixeb-studio:grid-size" content="10x10">
+    <meta name="ixeb-studio:screen-size" content="1280x1024">
+	<meta name="created" content="2018/12/17 18:03">
+	<title>File title</title>
+	<script type="text/javascript" src="vue.js"></script>
+	<!-- From here, enter your script and style. -->
+	<script type="text/javascript">
+	function onload_body() {
+        //TODO:
+        app = new Vue({
+          el: '#vue_contanier',
+          data: {
+              message: 'Hello Vue!!!!',
+              onceMessage: 'Never Change!!',
+              ixebBtnText: 'button'
+          },
+          methods: {
+              onclick: function (msg) {
+                  alert(msg);
+              }
+          },
+          created: function () {
+              console.log('this is created');
+          }
+        });
+    }
+    
+    
+	
+	</script>
+</head>
+<body onload="onload_body()">
+    <div id="vue_contanier">
+        <button>{{message}}</button>
+        <button id="button1" v-once v-on:click="onclick('hi~~')">{{onceMessage}}</button>
+    </div>
+</body>
+</html>
